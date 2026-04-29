@@ -5,6 +5,7 @@ frontend/node_modules/
 
 # Ortam değişkenleri (GİZLİ - asla commit'leme!)
 backend/.env
+backend/.env.example
 
 # Build çıktısı
 frontend/dist/
