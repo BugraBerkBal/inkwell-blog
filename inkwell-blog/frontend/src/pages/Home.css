@@ -1,0 +1,112 @@
+/* Hero */
+.home__hero {
+  text-align: center;
+  padding: 48px 0 56px;
+}
+
+.home__hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.home__hero-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.home__hero-sub {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Controls */
+.home__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.home__search-wrap {
+  position: relative;
+  max-width: 480px;
+}
+.home__search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  pointer-events: none;
+}
+.home__search {
+  padding-left: 42px;
+}
+
+/* Category Tabs */
+.home__categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.home__cat-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-subtle);
+  border: 1.5px solid transparent;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.home__cat-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+.home__cat-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Post Grid */
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* Pagination */
+.home__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.home__page-info {
+  font-size: 14px;
+  color: var(--text-secondary);
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .home__grid { grid-template-columns: 1fr; }
+  .home__hero { padding: 24px 0 36px; }
+}
