@@ -103,3 +103,135 @@
 @media (max-width: 480px) {
   .post-detail__views { display: none; }
 }
+
+/* ── Yorumlar ── */
+.comments-section {
+  max-width: 740px;
+  margin: 48px auto 64px;
+}
+
+.comments-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.comment-error {
+  color: #e53e3e;
+  font-size: 13px;
+}
+
+.comment-login-prompt {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.comment-login-prompt a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.comment-empty {
+  color: var(--text-muted);
+  font-size: 15px;
+  text-align: center;
+  padding: 32px 0;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment-card {
+  background: var(--bg-secondary, #f9f9f7);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.comment-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.comment-card__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.comment-card__author {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.comment-card__date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.comment-card__delete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.comment-card__delete:hover {
+  background: #fff0f0;
+}
+
+.comment-card__content {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin: 0;
+}

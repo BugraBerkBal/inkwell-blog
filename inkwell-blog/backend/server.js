@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 // Rota dosyaları
 const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
+const commentRoutes = require('./routes/comments');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 // --- API Rotaları ---
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/posts/:id/comments', commentRoutes);
 
 // Sağlık kontrolü
 app.get('/api/health', (req, res) => {
